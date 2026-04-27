@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #facc15;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-dark-700/60 backdrop-blur-xl border border-dark-400/30 rounded-2xl;
+  }
+
+  .gradient-border {
+    @apply relative;
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.1), transparent);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.4), transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-dark-900 font-semibold px-6 py-3 rounded-xl 
+           hover:bg-primary-dark transition-all duration-300 
+           hover:shadow-lg hover:shadow-primary/30 
+           active:scale-95 transform;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-xl 
+           hover:bg-primary hover:text-dark-900 transition-all duration-300 
+           active:scale-95 transform;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-white;
+  }
+
+  .section-subtitle {
+    @apply text-gray-400 text-lg md:text-xl max-w-2xl mx-auto;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-600 border border-dark-400/50 rounded-xl px-4 py-3 
+           text-white placeholder-gray-500 
+           focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 
+           transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light;
+  }
+
+  .bg-radial-glow {
+    background: radial-gradient(circle at center, rgba(250, 204, 21, 0.08) 0%, transparent 70%);
+  }
+}
