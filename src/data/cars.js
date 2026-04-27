@@ -8,7 +8,7 @@ const cars = [
     transmission: 'Manuelle',
     seats: 5,
     city: 'Casablanca',
-    image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=400&fit=crop',
+    image: '/src/images/dacia-logan.jpeg',
     badge: 'Populaire',
   },
   {
@@ -20,7 +20,7 @@ const cars = [
     transmission: 'Manuelle',
     seats: 5,
     city: 'Marrakech',
-    image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&h=400&fit=crop',
+    image: '/src/images/clio4.jpeg',
     badge: null,
   },
   {
@@ -32,7 +32,7 @@ const cars = [
     transmission: 'Automatique',
     seats: 5,
     city: 'Tanger',
-    image: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&h=400&fit=crop',
+    image: '/src/images/Peugeot 208.jpeg',
     badge: null,
   },
   {
@@ -44,7 +44,7 @@ const cars = [
     transmission: 'Automatique',
     seats: 5,
     city: 'Casablanca',
-    image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&h=400&fit=crop',
+    image: '/src/images/Volkswagen Golf 7.jpeg',
     badge: 'Meilleur choix',
   },
   {
@@ -92,7 +92,7 @@ const cars = [
     transmission: 'Manuelle',
     seats: 5,
     city: 'Agadir',
-    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop',
+    image: '/src/images/dacia-duster.jpeg',
     badge: 'Populaire',
   },
 ];
